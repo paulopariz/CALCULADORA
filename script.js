@@ -9,7 +9,7 @@ class Calculator {
     this.currentOperation = "";
   }
 
-  // add digit to calculator screen
+  // adiciona dígito na tela da calculadora
   addDigit(digit) {
     console.log(digit);
     // Check if number already has a dot
@@ -21,18 +21,18 @@ class Calculator {
     this.updateScreen();
   }
 
-  // process all calculator operations
+  // processa todas as operações da calculadora
   processOperation(operation) {
-    // Check if current value is empty
+    
     if (this.currentOperationText.innerText === "" && operation !== "C") {
-      // Change operation
+      
       if (this.previousOperationText.innerText !== "") {
         this.changeOperation(operation);
       }
       return;
     }
 
-    // Get current and previous values
+    
     let operationValue;
     let previous = +this.previousOperationText.innerText.split(" ")[0];
     let current = +this.currentOperationText.innerText;
@@ -88,7 +88,8 @@ class Calculator {
     }
   }
 
-  // Change values of calculator screen
+  // Alterar valores da tela da calculadora
+
   updateScreen(
     operationValue = null,
     operation = null,
@@ -96,20 +97,20 @@ class Calculator {
     previous = null
   ) {
     if (operationValue === null) {
-      // Append number to current value
+      
       this.currentOperationText.innerText += this.currentOperation;
     } else {
-      // Check if value is zero, if is just add current value
+      
       if (previous === 0) {
         operationValue = current;
       }
-      // Add current value to previous
+      
       this.previousOperationText.innerText = `${operationValue} ${operation}`;
       this.currentOperationText.innerText = "";
     }
   }
 
-  // Change math operation
+  
   changeOperation(operation) {
     const mathOperations = ["*", "-", "+", "/"];
 
@@ -121,24 +122,28 @@ class Calculator {
       this.previousOperationText.innerText.slice(0, -1) + operation;
   }
 
-  // Delete a digit
+  // Deletar um dígito
+
   processDelOperator() {
     this.currentOperationText.innerText =
       this.currentOperationText.innerText.slice(0, -1);
   }
 
-  // Clear current operation
+  // limpar operação atual
+
   processClearCurrentOperator() {
     this.currentOperationText.innerText = "";
   }
 
-  // Clear all operations
+  // Limpar todas as operações
+
   processClearOperator() {
     this.currentOperationText.innerText = "";
     this.previousOperationText.innerText = "";
   }
 
-  // Process an operation
+  //Processar uma operação
+
   processEqualOperator() {
     let operation = this.previousOperationText.innerText.split(" ")[1];
 
@@ -162,10 +167,8 @@ buttons.forEach((btn) => {
 });
 
 
-// function refresh (){
-//     window.location.reload();
-// } 
 
+// Dark mode
 function dark() {
   var element = document.body;
   element.classList.toggle("dark-mode");  
