@@ -11,13 +11,16 @@
 <br>
 
 ### 📝 Sobre:
-- Projeto feito com Java script. Uma calculadora com as 4 principais operações matemátias (adição, subtração, multiplicação e divisão).
+- Projeto feito com JavaScript. Uma calculadora com as 4 principais operações matemátias (adição, subtração, multiplicação e divisão).
 - Opção de tema escuro e claro.
 
 ### ⚙️ Tecnologias:
 - JavaScript
 - HTML
 - CSS
+
+### Projeto ao vivo:
+- <a href="https://calculadora-pink-alpha.vercel.app/">CLIQUE AQUI</a> para ver o projeto
 
 ### Clone do repositório:
 
